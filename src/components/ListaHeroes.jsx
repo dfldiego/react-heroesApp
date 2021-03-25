@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react';
 
 const ListaHeroes = () => {
     return (
-        <div>
+        <Fragment>
             <h1>Lista Heroes works!</h1>
-        </div>
+        </Fragment>
     )
 }
 
