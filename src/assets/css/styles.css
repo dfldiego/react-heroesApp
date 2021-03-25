@@ -1,0 +1,16 @@
+.tarjeta__heroe {
+    margin: 10px;
+}
+
+.doscolumnas_row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    margin: 5px;
+}
+
+.col {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    padding: 5px;
+}
