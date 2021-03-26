@@ -1,42 +1,47 @@
-import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 const MenuOpciones = () => {
-
-
-
     return (
-        <Fragment>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li className="nav-item">
-                            <Link
-                                className="nav-link"
-                                to={'/'}
-                            >Home </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link
-                                className="nav-link"
-                                to={'/dc'}
-                            >Heroes DC </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link
-                                className="nav-link"
-                                to={'/marvel'}
-                            >Heroes Marvel </Link>
-                        </li>
-                    </ul>
-                    <form className="form-inline my-2 my-lg-0">
-                        <input className="form-control mr-sm-2" type="search" placeholder="Search" />
-                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+
+            <Link
+                className="navbar-brand"
+                to="/"
+            >
+                Home
+            </Link>
+
+            <div className="navbar-collapse">
+                <div className="navbar-nav">
+
+                    <NavLink
+                        activeClassName="active"
+                        className="nav-item nav-link"
+                        exact
+                        to="/dc"
+                    >
+                        Heroes DC
+                    </NavLink>
+
+                    <NavLink
+                        activeClassName="active"
+                        className="nav-item nav-link"
+                        exact
+                        to="/marvel"
+                    >
+                        Heroes Marvel
+                    </NavLink>
                 </div>
-            </nav>
-        </Fragment>
+            </div>
+
+            <form className="form-inline my-2 my-lg-0">
+                <input className="form-control mr-sm-2" type="search" placeholder="Search" />
+                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+        </nav>
     )
 }
 
-export default MenuOpciones
+export default MenuOpciones;

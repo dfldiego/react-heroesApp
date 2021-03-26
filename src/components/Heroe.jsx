@@ -4,9 +4,14 @@ import '../assets/css/styles.css';
 const Heroe = ({ heroe }) => {
 
     const { nombre, poderes, img } = heroe;
-
+    /**
+     * TODO: aqui hacer tal cosa
+     * FIXME: otra cosa
+     */
     return (
         <Fragment>
+
+            {/* FIXME ASDASDASDASD */}
             <div className="tarjeta__heroe">
                 <div className="row">
                     <div className="col text-center text-success">{nombre}</div>
