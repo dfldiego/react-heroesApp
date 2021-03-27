@@ -14,7 +14,7 @@ const ListaHeroes = ({ casa }) => {
 
     return (
         <Fragment>
-            <div className="doscolumnas_row">
+            <div className="doscolumnas_row animate__animated animate__fadeIn">
                 {
                     heroes.map(heroe =>
                         <Heroe

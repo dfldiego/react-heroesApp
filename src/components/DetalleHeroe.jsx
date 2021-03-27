@@ -32,11 +32,11 @@ const DetalleHeroe = ({ history }) => {
                 <img
                     src={require(`../assets/img/${img}`).default}
                     alt={nombre}
-                    className="img-thumbnail"
+                    className="img-thumbnail animate__animated animate__fadeInLeft"
                 />
             </div>
 
-            <div className="col-8">
+            <div className="col-8 animate__animated animate__fadeIn">
                 <h3>{nombre}</h3>
                 <ul className="list-group list-group-flush">
                     <li className="list-group-item"> <b>Biografía:</b> {bio} </li>
@@ -47,10 +47,9 @@ const DetalleHeroe = ({ history }) => {
                 <ul className="list-group list-group-flush">
                     <li className="list-group-item">  <b>Poderes:</b>
                         {poderes.map(poder =>
-                            <li className="list-group-item" key={poder.toString()}>  {poder} </li>
+                            <p className="list-group-item" key={poder.toString()}>  {poder} </p>
                         )}
                     </li>
-
                 </ul>
             </div>
 
