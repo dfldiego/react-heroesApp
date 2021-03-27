@@ -4,14 +4,9 @@ import '../assets/css/styles.css';
 const Heroe = ({ heroe }) => {
 
     const { nombre, poderes, img } = heroe;
-    /**
-     * TODO: aqui hacer tal cosa
-     * FIXME: otra cosa
-     */
+
     return (
         <Fragment>
-
-            {/* FIXME ASDASDASDASD */}
             <div className="tarjeta__heroe">
                 <div className="row">
                     <div className="col text-center text-success">{nombre}</div>
@@ -19,7 +14,7 @@ const Heroe = ({ heroe }) => {
                 </div>
                 <div className="row">
                     <div className="col">
-                        <img src={require(`../assets/img/${img}`).default} />
+                        <img src={require(`../assets/img/${img}`).default} alt={nombre} />
                     </div>
                     <div className="col col__poderes">
                         <ul>
