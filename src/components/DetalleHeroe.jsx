@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Redirect, useParams } from 'react-router'
 import getHeroById from '../selectors/getHeroById';
 
@@ -6,7 +6,7 @@ const DetalleHeroe = ({ history }) => {
 
     // obtengo el id del heroe seleccionado
     const { id } = useParams();
-    const heroe = getHeroById(id);
+    const heroe = useMemo(() => getHeroById(id), [id]);
 
     if (!heroe) {
         return <Redirect to="/" />;
@@ -46,7 +46,9 @@ const DetalleHeroe = ({ history }) => {
 
                 <ul className="list-group list-group-flush">
                     <li className="list-group-item">  <b>Poderes:</b>
-                        {poderes.map(poder => <li className="list-group-item">  {poder} </li>)}
+                        {poderes.map(poder =>
+                            <li className="list-group-item" key={poder.toString()}>  {poder} </li>
+                        )}
                     </li>
 
                 </ul>

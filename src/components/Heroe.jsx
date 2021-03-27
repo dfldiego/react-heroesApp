@@ -21,7 +21,7 @@ const Heroe = ({ heroe }) => {
                         <ul>
                             {
                                 poderes.map(poder => (
-                                    <li>{poder}</li>
+                                    <li key={poder.toString()}>{poder}</li>
                                 ))
                             }
                         </ul>
