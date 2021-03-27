@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/css/styles.css';
 
 const Heroe = ({ heroe }) => {
 
-    const { nombre, poderes, img } = heroe;
+    const { id, nombre, poderes, img } = heroe;
 
     return (
         <Fragment>
@@ -28,7 +29,10 @@ const Heroe = ({ heroe }) => {
                 </div>
                 <div className="row">
                     <div className="col">
-                        <button className="text-uppercase">ver mas</button>
+                        <Link
+                            className="text-uppercase text-decoration-none text-dark p-2 bg-aqua"
+                            to={`./detalle-heroe/${id}`}
+                        >Ver Más</Link>
                     </div>
                     <div className="col"></div>
                 </div>
